@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">Half orange slice</title>
+  <path d="M5 50a45 45 0 0 1 90 0Z" fill="#f28c18" stroke="#111" stroke-width="4"/>
+  <path d="M15 50a35 35 0 0 1 70 0Z" fill="#ffc34d" stroke="#fff2b8" stroke-width="4"/>
+  <g stroke="#fff2b8" stroke-width="3">
+    <line x1="50" y1="50" x2="50" y2="15"/>
+    <line x1="50" y1="50" x2="80" y2="25"/>
+    <line x1="50" y1="50" x2="20" y2="25"/>
+  </g>
+  <circle cx="50" cy="50" r="5" fill="#f28c18"/>
+</svg>

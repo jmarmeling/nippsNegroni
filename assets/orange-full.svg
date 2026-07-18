@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+  <title id="title">Full orange slice</title>
+  <circle cx="50" cy="50" r="45" fill="#f28c18" stroke="#111" stroke-width="4"/>
+  <circle cx="50" cy="50" r="35" fill="#ffc34d" stroke="#fff2b8" stroke-width="4"/>
+  <g stroke="#fff2b8" stroke-width="3">
+    <line x1="50" y1="50" x2="50" y2="15"/>
+    <line x1="50" y1="50" x2="80" y2="25"/>
+    <line x1="50" y1="50" x2="85" y2="50"/>
+    <line x1="50" y1="50" x2="80" y2="75"/>
+    <line x1="50" y1="50" x2="50" y2="85"/>
+    <line x1="50" y1="50" x2="20" y2="75"/>
+    <line x1="50" y1="50" x2="15" y2="50"/>
+    <line x1="50" y1="50" x2="20" y2="25"/>
+  </g>
+  <circle cx="50" cy="50" r="5" fill="#f28c18"/>
+</svg>
