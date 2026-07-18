@@ -1,0 +1,196 @@
+:root {
+  --burnt-orange: #b9501b;
+  --paper: #e7893d;
+  --ink: #111;
+  --cream: #ffd690;
+  --border: #111;
+  --shadow: rgba(51, 18, 2, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 4px),
+    var(--burnt-orange);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+}
+
+.site-shell {
+  width: min(920px, calc(100% - 28px));
+  margin: 24px auto;
+  background: var(--paper);
+  border: 2px solid var(--border);
+  box-shadow: 8px 8px 0 var(--shadow);
+}
+
+.site-header {
+  padding: 28px 28px 20px;
+  text-align: center;
+  border-bottom: 2px solid var(--border);
+  background: linear-gradient(rgba(255,255,255,.08), rgba(0,0,0,.035));
+}
+
+.site-title {
+  margin: 0;
+  font-size: clamp(2.2rem, 7vw, 4.6rem);
+  letter-spacing: -0.05em;
+  text-shadow: 2px 2px 0 rgba(255, 214, 144, .55);
+}
+
+.site-tagline {
+  margin: 4px 0 0;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--border);
+  background: var(--cream);
+}
+
+.top-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 12px 18px;
+  border-right: 1px solid var(--border);
+}
+
+.top-nav a:first-child { border-left: 1px solid var(--border); }
+.top-nav a:hover,
+.top-nav a[aria-current="page"] {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+main { padding: 34px 32px 48px; }
+
+.page-heading {
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 3px double var(--border);
+  font-size: 2rem;
+}
+
+.intro-note {
+  border: 1px dashed var(--border);
+  background: rgba(255, 214, 144, .42);
+  padding: 12px 14px;
+  margin-bottom: 28px;
+}
+
+.review-card {
+  margin: 0 0 34px;
+  padding: 0 0 28px;
+  border-bottom: 3px double var(--border);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.review-title {
+  margin: 0;
+  font-size: 1.55rem;
+}
+
+.slice-rating {
+  display: inline-flex;
+  gap: 4px;
+  min-height: 42px;
+  align-items: center;
+}
+
+.orange-slice {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transform-origin: 50% 70%;
+  animation: jiggle 1.8s steps(2, jump-none) infinite;
+}
+
+.orange-slice:nth-child(even) { animation-delay: .4s; }
+.orange-slice.half { width: 34px; }
+
+@keyframes jiggle {
+  0%, 49% { transform: translateY(0) rotate(-3deg); }
+  50%, 100% { transform: translateY(-2px) rotate(3deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orange-slice { animation: none; }
+}
+
+.nipps-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.nipps-list li {
+  margin: 8px 0;
+  padding-left: 1.1rem;
+  text-indent: -1.1rem;
+}
+
+.nipps-list strong { font-variant: small-caps; }
+
+.review-summary {
+  background: rgba(255, 214, 144, .35);
+  border-left: 5px solid var(--border);
+  padding: 12px 16px;
+}
+
+.prose-card {
+  background: rgba(255, 214, 144, .28);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.prose-card h2 { margin-top: 0; }
+.prose-card dt { font-weight: 700; margin-top: 14px; }
+.prose-card dd { margin: 4px 0 0 0; }
+
+.site-footer {
+  padding: 14px 24px;
+  border-top: 2px solid var(--border);
+  text-align: center;
+  font-size: .9rem;
+  background: var(--cream);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  z-index: 10;
+  background: #fff;
+  padding: 8px;
+  border: 2px solid #000;
+}
+
+@media (max-width: 620px) {
+  .site-shell { margin: 10px auto; width: calc(100% - 18px); box-shadow: 4px 4px 0 var(--shadow); }
+  main { padding: 24px 18px 36px; }
+  .site-header { padding-inline: 18px; }
+  .top-nav { display: grid; grid-template-columns: 1fr 1fr; }
+  .top-nav a, .top-nav a:first-child { border: 1px solid var(--border); text-align: center; }
+  .review-header { align-items: flex-start; }
+}
